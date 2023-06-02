@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="https://t4is.uv.mx/saludos"
+ xmlns:tns="https://t4is.uv.mx/saludos"
+ elementFormDefault="qualified">
+ <xs:element name="SaludarRequest">
+  <xs:complexType>
+   <xs:sequence>
+
+  	<xs:element name="nombre" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="SaludarResponse">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="respuesta" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="BuscarRequest">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="saludobuscar" type="xs:int"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="BuscarResponse">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="saludobuscado" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="EditarRequest">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="indexeditar" type="xs:int"/>
+    <xs:element name="saludoeditar" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="EditarResponse">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="aviso" type="xs:string"/>
+    <xs:element name="saludoeditado" type="xs:string"/>
+    <xs:element name ="saludonuevo" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="EliminarRequest">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="index" type="xs:int"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="EliminarResponse">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="aviso" type="xs:string"/>
+    <xs:element name="nombre" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
